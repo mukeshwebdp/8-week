@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            height: 50px;
+            padding: 5px;
+            background-color: #1b1b1b;
+            display: flex;
+        }
+        .large-screens{
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            justify-content: space-between;
+            /* display: none; */
+        }
+        .nav-link{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            justify-content: space-between;
+        }
+        .nav-link a{
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 18px;
+        }
+        .nav-link a:hover{
+            color: blue;
+            font-weight: bold;
+        }
+        .large-screens button{
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid blue;
+            border-radius: 5px;
+            width: 130px;
+            background-color: blue;
+            color: aliceblue;
+        }
+        .large-screens button:hover{
+            scale: 1.1;
+            cursor: pointer;
+        }
+        .small-screen .fa-bars{
+            font-size: 40px;
+            display: none;
+        }
+        @media screen and (max-width:526px ){
+            .large-screens button{
+                display: none;
+            }
+            .nav-link{
+                display: none;
+            }
+            .small-screen .fa-bars{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <section class="large-screens">   
+            <img src="https://logo.com/_next/static/media/logo-color.834b40cf.svg?w=48&q=72" alt="logo">
+            <div class="nav-link">
+                <a href="#">Home</a><a href="#">Blog</a><a href="#">About</a><a href="#">Contact</a>
+            </div>
+            <button>Login</button>
+        </section>
+        <section class="small-screen">
+            <i class="fa-sharp fa-solid fa-bars" style="color: #e5e9f0;"></i>
+        </section>
+    </nav>
+</body>
+</html>

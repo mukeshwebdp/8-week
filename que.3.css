@@ -1,0 +1,147 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    height: 50px;
+    padding: 5px;
+    background-color: #1b1b1b;
+    display: flex;
+}
+.large-screens{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    /* display: none; */
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 50px;
+    justify-content: space-between;
+}
+.nav-link a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s all ease;
+}
+.nav-link a:hover{
+    color: red;
+    text-transform: uppercase;
+    
+}
+.large-screens button{
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 130px;
+    background-color: blue;
+    color: aliceblue;
+}
+.large-screens button:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+.small-screen .fa-bars{
+    font-size: 40px;
+    display: none;
+}
+               /* Question 2 */
+.hero-section{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.text-section{
+    width: 50%;
+    margin-left: 50px;
+}
+/* text areas */
+.text-section h3{
+    font-size: 30px;
+    margin-top: 100px;
+
+}
+.text-section h1{
+    font-size: 45px;
+    color: #1893f7;
+    margin-left: 5px;
+}
+.text-section h4{
+    font-size: 25px;
+    color: #1893f7;
+    margin-top: 25px;
+}
+.text-section p{
+    font-size: 18px;
+    width: 85%;
+}
+.imge-section img{
+    width: 60%;
+    margin: 30px 0;
+}
+/* video areas */
+.hero-section > video{
+    width: 41%;
+    z-index: -1;
+}
+.offer{
+    width: auto;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    text-align: center;
+}
+.offer > h1{
+    color: #1893f7;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.offer >h2{
+    color: aliceblue;
+    line-height: 35px;
+    font-weight: normal;
+}
+@media screen and (max-width:768px){
+    .large-screens button{
+        display: none;
+    }
+    .nav-link{
+        display: none;
+    }
+    .small-screen .fa-bars{
+        display: block;
+    }
+    .hero-section{
+        flex-direction: column;
+        margin-top: -14%;
+    }
+    .text-section{
+        width: 90%;
+    }
+    .hero-section > video{
+        width: 100%;
+    }
+    .offer{
+        background-color: #fff;
+    }
+    .offer > h1{
+        color: blue;
+        line-height: 45px;
+    }
+    .offer > h2{
+        color: black;
+        font-size: 28px;
+    }
+}
